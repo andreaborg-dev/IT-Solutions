@@ -1,0 +1,18 @@
+body {margin:0;font-family:system-ui;background:#f5f7fb;color:#1f2933;text-transform: capitalize;}
+.container {max-width:1100px;margin:auto;padding:0 1rem}
+.header {background:#0b4f8a;color:white;padding:1rem 0}
+.nav {display:flex;justify-content:space-between;align-items:center}
+.nav a {color:white;margin-left:1rem;text-decoration:none}
+.hero {padding:5rem 1rem;background:linear-gradient(135deg,#1fa2ff22,transparent)}
+.hero h2 {font-size:2.5rem}
+.btn {display:inline-block;background:#1fa2ff;color:white;padding:0.8rem 1.5rem;border-radius:30px;text-decoration:none;margin-top:1rem}
+.section {padding:3rem 0}
+.light {background:#fff}
+.grid {display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.card {background:white;padding:1.5rem;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,0.08)}
+form {display:flex;flex-direction:column;gap:0.5rem}
+input,textarea {padding:0.7rem;border:1px solid #ccc;border-radius:5px}
+#msg {display:none;color:green}
+footer {text-align:center;padding:1rem;background:#06345c;color:white}
+.info {text-transform: none;}
+@media(max-width:768px){.grid{grid-template-columns:1fr}.hero h2{font-size:1.8rem}}

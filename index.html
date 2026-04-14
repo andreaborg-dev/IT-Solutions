@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Andrea Borg IT Solutions</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container nav">
+        <h1 class="logo">Andrea Borg IT Solutions</h1>
+        <nav>
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container hero-content">
+        <div>
+          <h2>Fast & Reliable PC Repair</h2>
+          <p>
+            I fix slow computers, errors, and internet issues quickly so you can
+            get back to what matters.
+          </p>
+          <a href="#contact" class="btn">Get Help Now</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <h2>Services</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Speed Optimization</h3>
+            <p>Make your PC fast again with cleanup and tuning.</p>
+          </div>
+          <div class="card">
+            <h3>Error Fixes</h3>
+            <p>Fix crashes, bugs, and system issues.</p>
+          </div>
+          <div class="card">
+            <h3>WiFi & Network</h3>
+            <p>Fix slow or unstable internet connections.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section light">
+      <div class="container">
+        <h2>About Me</h2>
+        <p>
+          I provide honest, simple and effective PC repair services. No games,
+          just results.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact</h2>
+        <form action="https://formspree.io/f/xzdyzgaw" method="POST">
+          <input type="text" name="name" placeholder="Your name" required />
+
+          <input type="email" name="email" placeholder="Your email" required />
+
+          <textarea
+            name="message"
+            placeholder="Describe your issue"
+            required
+          ></textarea>
+
+          <!-- Optional: subject line -->
+          <input type="hidden" name="_subject" value="New PC Repair Request" />
+
+          <!-- Redirect after submit -->
+          <input
+            type="hidden"
+            name="_redirect"
+            value="https://andreaborg.online/thankyou.html"
+          />
+
+          <button type="submit" class="btn">Send</button>
+        </form>
+        <div class="info">
+          <p>Email: work.andreaborg@gmail.com</p>
+          <p>Phone: +356 99146706</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Andrea Borg IT Solutions</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

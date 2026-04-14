@@ -1,0 +1,171 @@
+// ======================= index.html =======================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Andrea Borg PC Repair – Basic PC Issue Fixes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <div class="nav">
+      <div class="logo">Andrea Borg PC Repair</div>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#steps">How It Works</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <h1>Professional PC Technician – Andrea Borg</h1>
+        <p>
+          Slow PC, random errors, or internet issues? I fix common computer problems quickly so you can get back to work or play.
+        </p>
+        <a href="#contact" class="btn-primary">Book a PC Check-Up</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <h2>FAQ</h2>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>How long does a repair take?</span>
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        Most basic issues are fixed within 1–2 hours.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Do you offer remote support?</span>
+        <span class="faq-toggle">+</span>
+      </div>
+      <div class="faq-answer">
+        Yes, many software issues can be fixed remotely.
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Andrea Borg</h2>
+
+    <form onsubmit="handleSubmit(event)">
+      <input type="text" placeholder="Your name" required />
+      <input type="email" placeholder="Your email" required />
+      <textarea placeholder="Describe your issue" required></textarea>
+      <button type="submit" class="btn-primary">Send</button>
+      <p id="form-message">Request sent (demo)</p>
+    </form>
+
+    <div class="contact-info">
+      <p>Email: work.andreaborg@gmail.com</p>
+      <p>Phone: +356 99146706</p>
+      <p>Website: andreaborg.online</p>
+    </div>
+  </section>
+
+  <footer>
+    Andrea Borg PC Repair
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+// ======================= styles.css =======================
+:root {
+  --primary: #0b4f8a;
+  --accent: #1fa2ff;
+  --bg: #f4f7fb;
+  --text: #1f2933;
+  --light: #ffffff;
+}
+
+body {
+  font-family: system-ui;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+}
+
+header {
+  background: var(--primary);
+  color: white;
+  padding: 1rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero {
+  padding: 3rem;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: white;
+  padding: 0.7rem 1.2rem;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+.faq-item {
+  background: white;
+  margin: 1rem 0;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.faq-answer {
+  display: none;
+}
+
+.faq-item.open .faq-answer {
+  display: block;
+}
+
+#form-message {
+  display: none;
+  color: green;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: var(--primary);
+  color: white;
+}
+
+
+// ======================= script.js =======================
+
+// FAQ toggle
+document.querySelectorAll(".faq-item").forEach(item => {
+  item.addEventListener("click", () => {
+    item.classList.toggle("open");
+  });
+});
+
+// Form handler
+function handleSubmit(e) {
+  e.preventDefault();
+  const msg = document.getElementById("form-message");
+  msg.style.display = "block";
+  setTimeout(() => msg.style.display = "none", 3000);
+  e.target.reset();
+}
